@@ -12,9 +12,9 @@ public class Main extends Application {
 
     Controller controller;
     Model model;
-    @Override
-    public void start(Stage primaryStage) throws Exception{
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
 
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
@@ -27,9 +27,23 @@ public class Main extends Application {
         controller.setModel(model);
 
         primaryStage.show();
+        if (controller.getIsGameOver()) {
+            reload(primaryStage);
+        }
     }
 
+    public void reload(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("Tic Tac Toe Game");
+        primaryStage.setScene(new Scene(root, 510, 510));
 
+        controller = loader.getController();
+        model = new Model();
+        controller.setModel(model);
+
+        primaryStage.show();
+    }
 
 
     public static void main(String[] args) {

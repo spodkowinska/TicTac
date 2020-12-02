@@ -12,6 +12,15 @@ import java.awt.*;
 public class Controller implements EventHandler {
 
     Model model;
+    boolean isGameOver = false;
+
+    public void setIsGameOver(boolean gameOver) {
+        isGameOver = gameOver;
+    }
+
+    public boolean getIsGameOver() {
+        return isGameOver;
+    }
 
     public void setModel(Model model) {
         this.model = model;
@@ -35,6 +44,7 @@ public class Controller implements EventHandler {
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer1()));
                         model.setNewGame();
+                        isGameOver = true;
                     }
                 } else {
                     button.setGraphic(new ImageView("x.png"));
@@ -42,12 +52,15 @@ public class Controller implements EventHandler {
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer2()));
                         model.setNewGame();
+                        isGameOver = true;
                     }
                 }
                 model.addTakenPosition(point);
                 changePlayer();
                 if(model.getTakenPositions().size()==9){
                     EndGameWindow.displayGameOver("TicTacToe Game", "GAME OVER");
+                    model.setNewGame();
+                    isGameOver = true;
                 }
             }
         }
@@ -114,4 +127,8 @@ public class Controller implements EventHandler {
         }
         return false;
     }
+    public void cleanBoard(){
+
+    }
+
 }

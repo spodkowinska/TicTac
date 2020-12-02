@@ -45,6 +45,7 @@ public class Model {
         setPlayer2(new Player(2));
     }
     public void setNewGame(){
-
+        takenPositions.clear();
+        setPlayers();
     }
 }
