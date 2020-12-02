@@ -13,7 +13,7 @@ public class Controller implements EventHandler {
 
     Model model;
 
-    public void setModel(Model model){
+    public void setModel(Model model) {
         this.model = model;
     }
 
@@ -25,28 +25,36 @@ public class Controller implements EventHandler {
     public void click(Event event) {
         Button button = (Button) event.getSource();
         if (button != null) {
-            int x = (int)button.getLayoutX();
-            int y = (int)button.getLayoutY();
+            int x = (int) button.getLayoutX();
+            int y = (int) button.getLayoutY();
             Point point = createPoint(x, y);
-            if (model.getPlayer1().getCurrentPlayer()) {
-                button.setGraphic(new ImageView("o.png"));
-                model.getPlayer1().addPosition(point);
-                if(model.getPlayer1().isWinner()){
-                    System.out.println("Winner");
-                }else{
-                    System.out.println("ups");
+            if (!model.getTakenPositions().contains(point)) {
+                if (model.getPlayer1().getCurrentPlayer()) {
+                    button.setGraphic(new ImageView("o.png"));
+                    model.getPlayer1().addPosition(point);
+                    if (haveWinner()) {
+                        EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer1()));
+                        model.setNewGame();
+                    }
+                } else {
+                    button.setGraphic(new ImageView("x.png"));
+                    model.getPlayer2().addPosition(point);
+                    if (haveWinner()) {
+                        EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer2()));
+                        model.setNewGame();
+                    }
                 }
-            } else {
-                button.setGraphic(new ImageView("x.png"));
-                model.getPlayer2().addPosition(point);
-                if(model.getPlayer2().isWinner()){
-                    System.out.println("Winner");
+                model.addTakenPosition(point);
+                changePlayer();
+                if(model.getTakenPositions().size()==9){
+                    EndGameWindow.displayGameOver("TicTacToe Game", "GAME OVER");
                 }
             }
-            model.addTakenPosition(point);
-
-            changePlayer();
         }
+    }
+
+    private String winningMessage(Player player) {
+        return "We have a Winner!\nCongratulations Player " + player.getNumber() + "\n";
     }
 
     @Override
@@ -70,40 +78,40 @@ public class Controller implements EventHandler {
             model.setPlayer1(player1);
         }
     }
-    private Point createPoint(int x, int y){
-        if(x==0){
-            if(y == 0){
-                return new Point(0,0);
-            }else if(y == 180) {
+
+    private Point createPoint(int x, int y) {
+        if (x == 0) {
+            if (y == 0) {
+                return new Point(0, 0);
+            } else if (y == 180) {
                 return new Point(0, 1);
-            } else if(y == 360){
-                return new Point(0,2);
+            } else if (y == 360) {
+                return new Point(0, 2);
             }
-        } else if (x == 180){
-            if(y == 0){
-                return new Point(1,0);
-            }else if(y == 180) {
+        } else if (x == 180) {
+            if (y == 0) {
+                return new Point(1, 0);
+            } else if (y == 180) {
                 return new Point(1, 1);
-            } else if(y == 360){
-                return new Point(1,2);
+            } else if (y == 360) {
+                return new Point(1, 2);
             }
-        }
-        else if (x == 360){
-            if(y == 0){
-                return new Point(2,0);
-            }else if(y == 180) {
+        } else if (x == 360) {
+            if (y == 0) {
+                return new Point(2, 0);
+            } else if (y == 180) {
                 return new Point(2, 1);
-            } else if(y == 360){
-                return new Point(2,2);
+            } else if (y == 360) {
+                return new Point(2, 2);
             }
         }
         return null;
     }
 
-    private boolean haveWinner(){
-        if(model.getPlayer1().isWinner()||model.getPlayer2().isWinner()){
+    private boolean haveWinner() {
+        if (model.getPlayer1().isWinner() || model.getPlayer2().isWinner()) {
             return true;
         }
-       return false;
+        return false;
     }
 }

@@ -44,4 +44,7 @@ public class Model {
         setPlayer1(player1);
         setPlayer2(new Player(2));
     }
+    public void setNewGame(){
+
+    }
 }

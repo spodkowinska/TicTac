@@ -19,7 +19,7 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
-        primaryStage.setTitle("Tic Tac Toe");
+        primaryStage.setTitle("Tic Tac Toe Game");
         primaryStage.setScene(new Scene(root, 510, 510));
 
         controller = loader.getController();
