@@ -31,11 +31,20 @@ public class Controller implements EventHandler {
             if (model.getPlayer1().getCurrentPlayer()) {
                 button.setGraphic(new ImageView("o.png"));
                 model.getPlayer1().addPosition(point);
+                if(model.getPlayer2().isWinner()){
+                    System.out.println("Winner");
+                }else{
+                    System.out.println("ups");
+                }
             } else {
                 button.setGraphic(new ImageView("x.png"));
                 model.getPlayer2().addPosition(point);
+                if(model.getPlayer2().isWinner()){
+                    System.out.println("Winner");
+                }
             }
             model.addTakenPosition(point);
+
             changePlayer();
         }
     }
@@ -92,6 +101,9 @@ public class Controller implements EventHandler {
     }
 
     private boolean haveWinner(){
+        if(model.getPlayer1().isWinner()||model.getPlayer2().isWinner()){
+            return true;
+        }
        return false;
     }
 }

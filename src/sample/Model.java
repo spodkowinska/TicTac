@@ -9,6 +9,7 @@ public class Model {
 
     public Model(){
         setPlayers();
+        this.takenPositions = new ArrayList<>();
     }
     private Player player1;
     private Player player2;
