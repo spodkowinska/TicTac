@@ -3,24 +3,29 @@ package sample;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 
 public class Controller implements EventHandler {
 
     Model model;
-    boolean isGameOver = false;
 
-    public void setIsGameOver(boolean gameOver) {
-        isGameOver = gameOver;
-    }
-
-    public boolean getIsGameOver() {
-        return isGameOver;
-    }
+    @FXML Button button1;
+    @FXML Button button2;
+    @FXML Button button3;
+    @FXML Button button4;
+    @FXML Button button5;
+    @FXML Button button6;
+    @FXML Button button7;
+    @FXML Button button8;
+    @FXML Button button9;
 
     public void setModel(Model model) {
         this.model = model;
@@ -43,24 +48,21 @@ public class Controller implements EventHandler {
                     model.getPlayer1().addPosition(point);
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer1()));
-                        model.setNewGame();
-                        isGameOver = true;
+                        setNewGame();
                     }
                 } else {
                     button.setGraphic(new ImageView("x.png"));
                     model.getPlayer2().addPosition(point);
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer2()));
-                        model.setNewGame();
-                        isGameOver = true;
+                        setNewGame();
                     }
                 }
                 model.addTakenPosition(point);
                 changePlayer();
                 if(model.getTakenPositions().size()==9){
                     EndGameWindow.displayGameOver("TicTacToe Game", "GAME OVER");
-                    model.setNewGame();
-                    isGameOver = true;
+                    setNewGame();
                 }
             }
         }
@@ -127,8 +129,25 @@ public class Controller implements EventHandler {
         }
         return false;
     }
-    public void cleanBoard(){
 
+    public void setNewGame(){
+        model.setTakenPositions(new ArrayList<>());
+        model.setPlayer1(null);
+        model.setPlayer2(null);
+        model.setPlayers();
+        cleanBoard();
+    }
+
+    public void cleanBoard(){
+        button1.setGraphic(new ImageView("blank.png"));
+        button2.setGraphic(new ImageView("blank.png"));
+        button3.setGraphic(new ImageView("blank.png"));
+        button4.setGraphic(new ImageView("blank.png"));
+        button5.setGraphic(new ImageView("blank.png"));
+        button6.setGraphic(new ImageView("blank.png"));
+        button7.setGraphic(new ImageView("blank.png"));
+        button8.setGraphic(new ImageView("blank.png"));
+        button9.setGraphic(new ImageView("blank.png"));
     }
 
 }

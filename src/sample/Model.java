@@ -13,7 +13,12 @@ public class Model {
     }
     private Player player1;
     private Player player2;
+
     private ArrayList<Point> takenPositions;
+
+    public void setTakenPositions(ArrayList<Point> takenPositions) {
+        this.takenPositions = takenPositions;
+    }
 
     public ArrayList<Point> getTakenPositions() {
         return takenPositions;
@@ -38,14 +43,11 @@ public class Model {
     public Player getPlayer2() {
         return player2;
     }
+
     public void setPlayers() {
         Player player1 = new Player(1);
         player1.setCurrentPlayer(true);
         setPlayer1(player1);
         setPlayer2(new Player(2));
-    }
-    public void setNewGame(){
-        takenPositions.clear();
-        setPlayers();
     }
 }

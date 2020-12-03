@@ -8,33 +8,33 @@
 
 <Pane maxHeight="-Infinity" fx:controller="sample.Controller" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="516.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="180.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button2" layoutX="180.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
             </ImageView>
          </graphic></Button>
-      <Button layoutX="360.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button3" layoutX="360.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -42,11 +42,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutY="180.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button4" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -54,11 +54,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="180.0" layoutY="180.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button5" layoutX="180.0" layoutY="180.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -66,11 +66,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="360.0" layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button6" layoutX="360.0" layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -78,11 +78,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button7" layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -90,11 +90,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="180.0" layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button8" layoutX="180.0" layoutY="360.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -102,11 +102,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="360.0" layoutY="180.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button fx:id="button9" layoutX="360.0" layoutY="180.0" onMouseClicked="#click" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@blank.png" />
+                  <Image url="@../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
