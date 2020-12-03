@@ -17,6 +17,7 @@ public class Controller implements EventHandler {
 
     Model model;
 
+
     @FXML Button button1;
     @FXML Button button2;
     @FXML Button button3;
@@ -26,6 +27,10 @@ public class Controller implements EventHandler {
     @FXML Button button7;
     @FXML Button button8;
     @FXML Button button9;
+
+    @FXML public void initialize(){
+//        setNewGame();
+    }
 
     public void setModel(Model model) {
         this.model = model;
@@ -55,6 +60,7 @@ public class Controller implements EventHandler {
             int x = (int) button.getLayoutX();
             int y = (int) button.getLayoutY();
             Point point = createPoint(x, y);
+            boolean isGameFinished = false;
             if (!model.getTakenPositions().contains(point)) {
                 if (model.getPlayer1().getCurrentPlayer()) {
                     button.setGraphic(new ImageView("o.png"));
@@ -62,6 +68,7 @@ public class Controller implements EventHandler {
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer1()));
                         setNewGame();
+                        isGameFinished = true;
                     }
                 } else {
                     button.setGraphic(new ImageView("x.png"));
@@ -69,10 +76,13 @@ public class Controller implements EventHandler {
                     if (haveWinner()) {
                         EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer2()));
                         setNewGame();
+                        isGameFinished = true;
                     }
                 }
-                model.addTakenPosition(point);
-                changePlayer();
+                if(!isGameFinished) {
+                    model.addTakenPosition(point);
+                    changePlayer();
+                }
                 if(model.getTakenPositions().size()==9){
                     EndGameWindow.displayGameOver("TicTacToe Game", "GAME OVER");
                     setNewGame();
@@ -149,6 +159,7 @@ public class Controller implements EventHandler {
         model.setPlayer2(null);
         model.setPlayers();
         cleanBoard();
+
     }
 
     public void cleanBoard(){

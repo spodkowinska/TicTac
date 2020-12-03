@@ -35,6 +35,18 @@ public class Player {
         ArrayList<Point> points = new ArrayList<Point>(positions);
         if (points.size() > 2) {
             if (points.size() == 5) {
+                if (points.get(2).getX() - points.get(3).getX() == points.get(3).getX() - points.get(4).getX()
+                        && points.get(2).getY() - points.get(3).getY() == points.get(3).getY() - points.get(4).getY()) {
+                    return true;
+                }
+                if (points.get(1).getX() - points.get(2).getX() == points.get(2).getX() - points.get(4).getX()
+                        && points.get(1).getY() - points.get(2).getY() == points.get(2).getY() - points.get(4).getY()) {
+                    return true;
+                }
+                if (points.get(1).getX() - points.get(3).getX() == points.get(3).getX() - points.get(4).getX()
+                        && points.get(1).getY() - points.get(3).getY() == points.get(3).getY() - points.get(4).getY()) {
+                    return true;
+                }
                 if (points.get(0).getX() - points.get(2).getX() == points.get(2).getX() - points.get(4).getX()
                         && points.get(0).getY() - points.get(2).getY() == points.get(2).getY() - points.get(4).getY()) {
                     return true;
@@ -49,6 +61,10 @@ public class Player {
                 }
             }
             if (points.size() >= 4) {
+                if (points.get(1).getX() - points.get(2).getX() == points.get(2).getX() - points.get(3).getX()
+                        && points.get(1).getY() - points.get(2).getY() == points.get(2).getY() - points.get(3).getY()) {
+                    return true;
+                }
                 if (points.get(0).getX() - points.get(2).getX() == points.get(2).getX() - points.get(3).getX()
                         && points.get(0).getY() - points.get(2).getY() == points.get(2).getY() - points.get(3).getY()) {
                     return true;
