@@ -36,6 +36,7 @@ public class Controller implements EventHandler {
         Button button = (Button) event.getSource();
         if (button != null) {
             button.setStyle("-fx-background-color: grey");
+//            button.setStyle("-fx-border-color: darkgrey");
         }
     }
 
