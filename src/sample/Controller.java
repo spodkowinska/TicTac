@@ -33,6 +33,18 @@ public class Controller implements EventHandler {
 
     @FXML
     public void hoover(Event event) {
+        Button button = (Button) event.getSource();
+        if (button != null) {
+            button.setStyle("-fx-background-color: grey");
+        }
+    }
+
+    @FXML
+    public void unhoover(Event event) {
+        Button button = (Button) event.getSource();
+        if (button != null) {
+            button.setStyle("-fx-background-color: transparent");
+        }
     }
 
     @FXML
