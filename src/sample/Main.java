@@ -34,9 +34,6 @@ model.addTakenPosition(new Point(0,0));
         model.addTakenPosition(new Point(0,1));
         model.addTakenPosition(new Point(1,1));
         primaryStage.show();
-Point point = computer.randomMove();
-        System.out.println(point);
-
     }
 
 //    public void reload(Stage primaryStage) throws Exception {
