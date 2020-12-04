@@ -6,12 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.util.Arrays;
 
 public class Main extends Application {
 
     Controller controller;
     Model model;
+    Computer computer;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -23,10 +25,17 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 510, 510));
 
         controller = loader.getController();
+        computer = new Computer(2);
         model = new Model();
         controller.setModel(model);
-
+        computer.setModel(model);
+model.addTakenPosition(new Point(0,0));
+        model.addTakenPosition(new Point(1,0));
+        model.addTakenPosition(new Point(0,1));
+        model.addTakenPosition(new Point(1,1));
         primaryStage.show();
+Point point = computer.randomMove();
+        System.out.println(point);
 
     }
 
