@@ -18,6 +18,7 @@ public class Computer extends Player {
     public void setModel(Model model) {
         this.model = model;
     }
+// to use on easy level
 
     public Point randomMove() {
         ArrayList<Point> takenPositions = model.getTakenPositions();
@@ -38,6 +39,12 @@ public class Computer extends Player {
                 pointFound = true;
             }
         }
+        return nextPoint;
+    }
+// to use on hard level
+
+    public Point nextMove(){
+        Point nextPoint = new
         return nextPoint;
     }
 }
