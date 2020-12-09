@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" fx:controller="sample.Controller" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="516.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="516.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button fx:id="button1" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="0-0" fx:id="button00" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -19,7 +18,7 @@
                </cursor>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="button2" layoutX="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="0-1" fx:id="button01" layoutX="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -30,7 +29,7 @@
                </cursor>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="button3" layoutX="360.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="0-2" fx:id="button02" layoutX="360.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -42,7 +41,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button4" layoutY="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="1-0" fx:id="button10" layoutY="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -54,7 +53,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button5" layoutX="180.0" layoutY="180.0" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover"  mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="1-1" fx:id="button11" layoutX="180.0" layoutY="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -66,7 +65,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button6" layoutX="360.0" layoutY="360.0" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="2-2" fx:id="button22" layoutX="360.0" layoutY="360.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -78,7 +77,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button7" layoutY="360.0" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="2-0" fx:id="button20" layoutY="360.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -90,7 +89,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button8" layoutX="180.0" layoutY="360.0" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="2-1" fx:id="button21" layoutX="180.0" layoutY="360.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
@@ -102,7 +101,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button9" layoutX="360.0" layoutY="180.0" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <Button id="1-2" fx:id="button12" layoutX="360.0" layoutY="180.0" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>

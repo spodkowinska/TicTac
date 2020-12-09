@@ -7,12 +7,14 @@ import java.util.ArrayList;
 
 public class Model {
 
-    public Model(){
+    public Model(boolean isOnePlayerGame){
         setPlayers();
         this.takenPositions = new ArrayList<>();
+        this.isOnePlayerGame = isOnePlayerGame;
     }
     private Player player1;
     private Player player2;
+    boolean isOnePlayerGame;
 
     private ArrayList<Point> takenPositions;
 
@@ -48,6 +50,11 @@ public class Model {
         Player player1 = new Player(1);
         player1.setCurrentPlayer(true);
         setPlayer1(player1);
-        setPlayer2(new Player(2));
+        if (isOnePlayerGame) {
+            setPlayer2(new Player(2));
+        }
+        else {
+            setPlayer2(new Computer(2));
+        }
     }
 }

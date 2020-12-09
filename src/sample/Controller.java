@@ -18,16 +18,18 @@ public class Controller implements EventHandler {
     Model model;
 
 
-    @FXML Button button1;
-    @FXML Button button2;
-    @FXML Button button3;
-    @FXML Button button4;
-    @FXML Button button5;
-    @FXML Button button6;
-    @FXML Button button7;
-    @FXML Button button8;
-    @FXML Button button9;
+    @FXML Button button00;
+    @FXML Button button01;
+    @FXML Button button02;
+    @FXML Button button10;
+    @FXML Button button11;
+    @FXML Button button12;
+    @FXML Button button20;
+    @FXML Button button21;
+    @FXML Button button22;
+    Button[] buttons = {button00, button01, button02, button10, button11, button12, button20, button21, button22};
 
+//TODO after implementing computer actions
     @FXML public void initialize(){
 //        setNewGame();
     }
@@ -86,6 +88,17 @@ public class Controller implements EventHandler {
                 if(model.getTakenPositions().size()==9){
                     EndGameWindow.displayGameOver("TicTacToe Game", "GAME OVER");
                     setNewGame();
+                }
+            }
+        }
+
+        if(model.getPlayer2() instanceof Computer){
+
+            Point move = ((Computer) model.getPlayer2()).randomMove();
+            for( Button buttonToCheck : buttons) {
+                if (buttonToCheck.getId() == String.valueOf(move.getX()) + String.valueOf(move.getY())) {
+                    buttonToCheck.setGraphic(new ImageView("x.png"));
+                    break;
                 }
             }
         }
@@ -163,15 +176,15 @@ public class Controller implements EventHandler {
     }
 
     public void cleanBoard(){
-        button1.setGraphic(new ImageView("blank.png"));
-        button2.setGraphic(new ImageView("blank.png"));
-        button3.setGraphic(new ImageView("blank.png"));
-        button4.setGraphic(new ImageView("blank.png"));
-        button5.setGraphic(new ImageView("blank.png"));
-        button6.setGraphic(new ImageView("blank.png"));
-        button7.setGraphic(new ImageView("blank.png"));
-        button8.setGraphic(new ImageView("blank.png"));
-        button9.setGraphic(new ImageView("blank.png"));
+        button01.setGraphic(new ImageView("blank.png"));
+        button02.setGraphic(new ImageView("blank.png"));
+        button00.setGraphic(new ImageView("blank.png"));
+        button10.setGraphic(new ImageView("blank.png"));
+        button11.setGraphic(new ImageView("blank.png"));
+        button12.setGraphic(new ImageView("blank.png"));
+        button20.setGraphic(new ImageView("blank.png"));
+        button21.setGraphic(new ImageView("blank.png"));
+        button22.setGraphic(new ImageView("blank.png"));
     }
 
 }
