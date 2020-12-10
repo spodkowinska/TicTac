@@ -1,13 +1,14 @@
-package sample;
+package podkowinski.controller;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import podkowinski.model.Computer;
+import podkowinski.view.EndGameWindow;
+import podkowinski.model.Model;
+import podkowinski.model.Player;
 
 import java.awt.Point;
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class Controller implements EventHandler {
     //TODO after implementing computer actions
     @FXML
     public void initialize() {
-//        setNewGame();
+    //    setNewGame();
         buttons[0] = button00;
         buttons[1] = button01;
         buttons[2] = button02;

@@ -5,13 +5,13 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="516.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="516.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="podkowinski.controller.Controller">
    <children>
       <Button id="00" fx:id="button00" mnemonicParsing="false" onAction="#click" onMouseEntered="#hoover" onMouseExited="#unhoover" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -22,7 +22,7 @@
          <graphic>
             <ImageView  fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -33,7 +33,7 @@
          <graphic>
             <ImageView  fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -45,7 +45,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -57,7 +57,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -69,7 +69,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -81,7 +81,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -93,7 +93,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -105,7 +105,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" focusTraversable="true">
                <image>
-                  <Image url="@../blank.png" />
+                  <Image url="@../../blank.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />

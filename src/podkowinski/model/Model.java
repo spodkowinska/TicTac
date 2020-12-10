@@ -1,20 +1,20 @@
-package sample;
-
-import javafx.scene.image.ImageView;
+package podkowinski.model;
 
 import java.awt.*;
 import java.util.ArrayList;
 
 public class Model {
 
-    public Model(boolean isOnePlayerGame){
+    public Model(boolean isOnePlayerGame, boolean isEasyGame){
         setPlayers();
         this.takenPositions = new ArrayList<>();
         this.isOnePlayerGame = isOnePlayerGame;
+        this.isEasyGame = isEasyGame;
     }
     private Player player1;
     private Player player2;
     boolean isOnePlayerGame;
+    boolean isEasyGame;
 
     private ArrayList<Point> takenPositions;
 

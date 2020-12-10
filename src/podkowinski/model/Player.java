@@ -1,4 +1,4 @@
-package sample;
+package podkowinski.model;
 
 import java.awt.Point;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public class Player {
     int number;
-    SortedSet<Point> positions;
+    public SortedSet<Point> positions;
     public boolean isCurrentPlayer;
 
     public Player(int number) {

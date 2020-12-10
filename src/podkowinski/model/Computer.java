@@ -1,7 +1,8 @@
-package sample;
+package podkowinski.model;
 
 
-import javafx.scene.image.ImageView;
+import podkowinski.model.Model;
+import podkowinski.model.Player;
 
 import java.awt.*;
 import java.util.*;

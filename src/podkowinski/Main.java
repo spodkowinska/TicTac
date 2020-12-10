@@ -1,13 +1,13 @@
-package sample;
+package podkowinski;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.awt.*;
-import java.util.Arrays;
+import podkowinski.controller.Controller;
+import podkowinski.model.Computer;
+import podkowinski.model.Model;
 
 public class Main extends Application {
 
@@ -17,8 +17,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/welcomeScreen.fxml"));
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Tic Tac Toe Game");
         primaryStage.setScene(new Scene(root, 510, 510));
@@ -29,10 +29,11 @@ public class Main extends Application {
 //        primaryStage.setScene(new Scene(root, 510, 510));
         controller = loader.getController();
        // computer = new Computer(2);
-        model = new Model(true);
+
+        model = new Model(true, true);
         controller.setModel(model);
-        computer=(Computer)model.getPlayer2();
-        computer.setModel(model);
+//        computer=(Computer)model.getPlayer2();
+//        computer.setModel(model);
         primaryStage.show();
     }
 
