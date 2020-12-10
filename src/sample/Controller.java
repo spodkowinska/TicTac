@@ -89,33 +89,45 @@ public class Controller implements EventHandler {
                 if (model.getPlayer1().getCurrentPlayer()) {
                     button.setGraphic(new ImageView("o.png"));
                     model.getPlayer1().addPosition(point);
-
+                    if (!haveWinner()) {
+                        model.addTakenPosition(point);
+                        changePlayer();
+                    }
+                    System.out.println("PLAYER 1: " + model.getPlayer1().positions);
                 } else if (model.getPlayer2().getCurrentPlayer() && !(model.getPlayer2() instanceof Computer)) {
                     button.setGraphic(new ImageView("x.png"));
                     model.getPlayer2().addPosition(point);
+                    if (!haveWinner()) {
+                        model.addTakenPosition(point);
+                        changePlayer();
+                    }
+                    System.out.println("PLAYER 2: " + model.getPlayer2().positions);
                 }
 
-                if (!isGameFinished) {
-                    model.addTakenPosition(point);
-                    changePlayer();
-                }
-                if (model.getPlayer2() instanceof Computer) {
-
-                    Point move = ((Computer) model.getPlayer2()).randomMove();
-                    for (Button buttonToCheck : buttons) {
-                        if (buttonToCheck.getId().equals(((int) move.getX()) + "" + (int) move.getY())) {
-                            buttonToCheck.setGraphic(new ImageView("x.png"));
-                            model.getPlayer2().addPosition(move);
-                            model.addTakenPosition(move);
-                            changePlayer();
-                            break;
+                if (!haveWinner() && model.getPlayer2() instanceof Computer) {
+                    boolean isComputerMoved = false;
+                    while (!isComputerMoved) {
+                        Point move = ((Computer) model.getPlayer2()).randomMove();
+                        if (!model.getTakenPositions().contains(move)) {
+                            for (Button buttonToCheck : buttons) {
+                                if (buttonToCheck.getId().equals(((int) move.getX()) + "" + (int) move.getY())) {
+                                    buttonToCheck.setGraphic(new ImageView("x.png"));
+                                    model.getPlayer2().addPosition(move);
+                                    System.out.println("COMPUTER: " + model.getPlayer2().positions);
+                                    if (!haveWinner()) {
+                                        changePlayer();
+                                        model.addTakenPosition(move);
+                                    }
+                                    isComputerMoved = true;
+                                    break;
+                                }
+                            }
                         }
                     }
-                    System.out.println(model.getTakenPositions());
                 }
             }
             if (haveWinner()) {
-                EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer2().isCurrentPlayer ? model.getPlayer1() : model.getPlayer2()));
+                EndGameWindow.displayWinner("TicTacToe Game", winningMessage(model.getPlayer1().isCurrentPlayer ? model.getPlayer1() : model.getPlayer2()));
                 setNewGame();
                 isGameFinished = true;
             }
