@@ -1,6 +1,6 @@
 package sample;
 
-import java.awt.*;
+import java.awt.Point;
 import java.util.ArrayList;
 import java.util.SortedSet;
 import java.util.TreeSet;

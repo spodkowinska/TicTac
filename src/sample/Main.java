@@ -23,6 +23,10 @@ public class Main extends Application {
         primaryStage.setTitle("Tic Tac Toe Game");
         primaryStage.setScene(new Scene(root, 510, 510));
 
+//        FXMLLoader loader1 = new FXMLLoader(getClass().getResource("welcomScreen.fxml"));
+//        Parent root1 = loader.load();
+//        primaryStage.setTitle("Tic Tac Toe Game");
+//        primaryStage.setScene(new Scene(root, 510, 510));
         controller = loader.getController();
        // computer = new Computer(2);
         model = new Model(true);

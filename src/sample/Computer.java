@@ -27,6 +27,7 @@ public class Computer extends Player {
 
     public Point randomMove() {
         ArrayList<Point> takenPositions = model.getTakenPositions();
+        System.out.println(takenPositions);
         boolean pointFound = false;
         Point nextPoint = new Point();
         while (!pointFound) {
@@ -34,7 +35,7 @@ public class Computer extends Player {
             int randomY = random.nextInt(3);
             boolean randomAccepted = true;
             for (Point position : takenPositions) {
-                if (randomX == position.getX() && randomY == position.getY()) {
+                if (position.equals(new Point(randomX, randomY))) {
                     randomAccepted = false;
                     break;
                 }
